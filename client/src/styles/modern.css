@@ -1,38 +1,41 @@
-/* Variables CSS para tema oscuro cyberpunk moderno */
 :root {
-  --primary-color: #00d4ff;
-  --primary-hover: #00b8e6;
-  --primary-glow: rgba(0, 212, 255, 0.3);
-  --secondary-color: #ff6b6b;
-  --secondary-hover: #ff5252;
-  --accent-color: #4ecdc4;
-  --accent-hover: #26a69a;
+  /* Colores principales negro/rojo */
+  --primary-color: #e50914;         /* rojo principal */
+  --primary-hover: #b81d24;
+  --primary-glow: rgba(229, 9, 20, 0.35);
+
+  --secondary-color: #b81d24;       /* rojo más oscuro */
+  --secondary-hover: #8c1219;
+
+  --accent-color: #ffffff;          /* blanco como acento suave */
+  --accent-hover: #e0e0e0;
+
   --success-color: #00e676;
   --warning-color: #ffc107;
   --error-color: #ff1744;
   
-  /* Tema oscuro */
-  --bg-primary: #0a0e27;
-  --bg-secondary: #1a1f3a;
-  --bg-card: #252d4f;
-  --bg-card-hover: #2d3561;
-  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --bg-gradient-dark: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  /* Tema oscuro negro */
+  --bg-primary: #050509;
+  --bg-secondary: #111111;
+  --bg-card: #161616;
+  --bg-card-hover: #1f1f1f;
+  --bg-gradient: linear-gradient(135deg, #e50914 0%, #b81d24 100%);
+  --bg-gradient-dark: linear-gradient(135deg, #050509 0%, #161616 100%);
   
   --text-primary: #ffffff;
-  --text-secondary: #b8c5d1;
-  --text-muted: #7c8db5;
+  --text-secondary: #c5c5c5;
+  --text-muted: #7a7a7a;
   --text-accent: var(--primary-color);
   
-  --border-color: #3d4465;
-  --border-glow: rgba(0, 212, 255, 0.2);
+  --border-color: #2a2a2a;
+  --border-glow: rgba(229, 9, 20, 0.3);
   --border-radius: 16px;
   --border-radius-sm: 8px;
   --border-radius-lg: 24px;
   
-  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.1);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-button: 0 4px 16px rgba(0, 212, 255, 0.3);
+  --shadow-glow: 0 0 25px rgba(229, 9, 20, 0.35);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-button: 0 4px 16px rgba(229, 9, 20, 0.4);
   
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,8 +52,8 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg-primary);
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(229, 9, 20, 0.24) 0%, transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.8) 0%, transparent 55%);
   min-height: 100vh;
   color: var(--text-primary);
   line-height: 1.6;
@@ -79,7 +82,7 @@ body {
 .app-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, #ffffff, var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -96,7 +99,7 @@ body {
 
 /* Botón principal moderno */
 .btn-modern {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, #00d4ff, #4ecdc4);
   color: white;
   border: none;
   border-radius: var(--border-radius);
@@ -156,7 +159,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
 .table-header {
@@ -220,7 +223,7 @@ body {
 }
 
 .modern-table th {
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover));
+  background: linear-gradient(135deg, #111111, #1f1f1f);
   color: var(--text-primary);
   padding: 1.25rem 1rem;
   text-align: left;

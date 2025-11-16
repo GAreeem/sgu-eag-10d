@@ -51,32 +51,21 @@ export default function UsersPage() {
     }
   };
 
-
-
   return (
     <div className="app-container">
-      {/* Header moderno */}
-      <div className="app-header">
-        <h1 className="app-title">SGU - HRA</h1>
-      </div>
+      
 
       {/* Alertas */}
       <AppAlert alert={alert} onClose={() => setAlert(null)} />
 
-      {/* Contenedor de tabla moderna */}
+      {/* Contenedor de tabla */}
       <div className="table-container">
         <div className="table-header">
           <div className="table-title">
             👥 Usuarios Registrados
           </div>
-          <div className="search-container">
-            <span className="search-icon">🔍</span>
-            <input
-              type="text"
-              className="search-input"
-              placeholder="Buscar usuarios..."
-            />
-          </div>
+
+          {/* Botón NUEVO USUARIO (los botones se quedan igual) */}
           <button className="btn-modern" onClick={openNew}>
             ➕ Nuevo Usuario
           </button>
@@ -139,7 +128,7 @@ export default function UsersPage() {
         )}
       </div>
 
-      {/* Modal moderno */}
+      {/* Modal */}
       {show && (
         <div className="modal-overlay" onClick={close}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
